@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	calc "math/calculator"
+)
 
 func main() {
-	fmt.Println(sumWith(112, 10))
-	fmt.Println(subtractBy(112, 10))
-	fmt.Println(multipleBy(112, 10))
-	fmt.Println(divideBy(112, 10))
+	fmt.Println(calc.SumWith(112, 10))
+	fmt.Println(calc.SubtractBy(112, 10))
+	fmt.Println(calc.MultipleBy(112, 10))
+	fmt.Println(calc.DivideBy(112, 10))
 }

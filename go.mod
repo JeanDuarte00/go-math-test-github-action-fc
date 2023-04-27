@@ -1,3 +1,3 @@
-module teste
+module math
 
 go 1.19
