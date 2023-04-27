@@ -5,12 +5,18 @@ on:
       - develop
 jobs:
   check-application:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix: 
+        version: ["1.14", "1.15"]
+        system: [ubuntu-latest]
+
+    runs-on: ${{ matrix.system }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
         with:
-          go-version: 1.15
+          go-version: ${{ matrix.version }}
       - run: go test
       - run: go run main.go
       - run: echo "Action Executed."
