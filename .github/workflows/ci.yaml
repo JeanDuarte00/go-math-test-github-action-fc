@@ -30,4 +30,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: false
-          tags: jeanduarte00/mathAppGoTest:latest
+          tags: jeanduarte00/math-app-go-test:latest
