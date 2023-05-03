@@ -2,10 +2,10 @@ FROM golang:1.19
 
 WORKDIR /app
 
+COPY . ./src
+
 RUN go mod init mathematics
 
-COPY . .
+#RUN go build -o math
 
-RUN go build -o math
-
-CMD ["./math"]
+#CMD ["./math"]

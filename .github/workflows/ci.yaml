@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-go@v3
         with:
           go-version: ${{ matrix.version }}
-      - run: go test ./...
+      - run: go test -coverprofile=coverage.out ./...
       - run: go run main.go
 
       - name: Set up QEMU
